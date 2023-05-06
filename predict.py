@@ -29,13 +29,15 @@ from helpers.aesthetics import load_aesthetics_model
 
 
 MODEL_CACHE = "diffusion_models_cache"
+MODEL_VAE = "stabilityai/sd-vae-ft-ema"
+MODELS = ["v1-5-pruned.ckpt", "mdjrny-v4.ckpt"]
 
 
 class Predictor(BasePredictor):
     def setup(self):
         """Load the model into memory to make running multiple predictions efficient"""
         # Load the default model in setup()
-        self.default_ckpt = "Protogen_V2.2.ckpt"
+        self.default_ckpt = "v1-5-pruned.ckpt"
         default_model_ckpt_config_path = "configs/v1-inference.yaml"
         default_model_ckpt_path = os.path.join(MODEL_CACHE, self.default_ckpt)
         local_config = OmegaConf.load(default_model_ckpt_config_path)
@@ -49,20 +51,9 @@ class Predictor(BasePredictor):
     def predict(
         self,
         model_checkpoint: str = Input(
-            choices=[
-                "v2-1_768-ema-pruned.ckpt",
-                "v2-1_512-ema-pruned.ckpt",
-                "768-v-ema.ckpt",
-                "512-base-ema.ckpt",
-                "Protogen_V2.2.ckpt",
-                "v1-5-pruned.ckpt",
-                "v1-5-pruned-emaonly.ckpt",
-                "sd-v1-4.ckpt",
-                "robo-diffusion-v1.ckpt",
-                "wd-v1-3-float16.ckpt",
-            ],
+            choices=MODELS,
             description="Choose stable diffusion model.",
-            default="Protogen_V2.2.ckpt",
+            default="v1-5-pruned.ckpt",
         ),
         max_frames: int = Input(
             description="Number of frames for animation", default=200
