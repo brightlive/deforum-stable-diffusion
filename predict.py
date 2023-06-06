@@ -30,7 +30,7 @@ from helpers.aesthetics import load_aesthetics_model
 
 MODEL_CACHE = "diffusion_models_cache"
 MODEL_VAE = "stabilityai/sd-vae-ft-ema"
-MODELS = ["v1-5-pruned.ckpt", "mdjrny-v4.ckpt", "wd-1-4-anime_e1.ckpt", "moDi-v1-pruned.ckpt"]
+MODELS = ["v1-5-pruned.ckpt", "mdjrny-v4.ckpt", "wd-v1-3-full.ckpt", "moDi-v1-pruned.ckpt"]
 
 
 class Predictor(BasePredictor):
