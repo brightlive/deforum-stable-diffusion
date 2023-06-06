@@ -22,9 +22,9 @@ model_map = {
         'url': "https://huggingface.co/prompthero/openjourney-v4/resolve/main/openjourney-v4.ckpt",
         'requires_login': False,
     },
-    "wd-1-4-anime_e2.ckpt.ckpt": {
+    "wd-1-4-anime_e1.ckpt": {
         'sha256': 'c76e0962bc60ccdc18e0dce387635b472b5a19038d637216030acbbe6eda2713',
-        'url': 'https://huggingface.co/hakurei/waifu-diffusion-v1-4/resolve/main/wd-1-4-anime_e2.ckpt',
+        'url': 'https://huggingface.co/hakurei/waifu-diffusion-v1-4/resolve/main/wd-1-4-anime_e1.ckpt',
         'requires_login': False,
         },
     "moDi-v1-pruned.ckpt": {
