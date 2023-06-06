@@ -99,7 +99,7 @@ class Predictor(BasePredictor):
             description="Random seed. Leave blank to randomize the seed", default=None
         ),
         fps: int = Input(
-            default=15, ge=10, le=60, description="Choose fps for the video."
+            default=15, ge=1, le=60, description="Choose fps for the video."
         ),
         clip_name: str = Input(
             choices=["ViT-L/14", "ViT-L/14@336px", "ViT-B/16", "ViT-B/32"],

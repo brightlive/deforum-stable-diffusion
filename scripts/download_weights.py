@@ -18,8 +18,8 @@ model_map = {
         'requires_login': False,
         },
     "mdjrny-v4.ckpt": {
-        'sha256': '5d5ad06cc24170b32f25f0180a357e315848000c5f400ffda350e59142fabd68',
-        'url': "https://huggingface.co/prompthero/openjourney/resolve/main/mdjrny-v4.ckpt",
+        'sha256': '02e37aad9f74f574808ad456043b89e8c6b24e22828743fcf002168f76493d9b',
+        'url': "https://huggingface.co/prompthero/openjourney-v4/resolve/main/openjourney-v4.ckpt",
         'requires_login': False,
     },
 }
