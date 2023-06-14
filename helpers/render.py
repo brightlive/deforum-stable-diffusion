@@ -168,7 +168,7 @@ def unsharp_mask(img, kernel_size=(5, 5), sigma=1.0, amount=1.0, threshold=0):
     return sharpened
 
 
-def render_animation(args, anim_args, animation_prompts, root):
+def render_animation(args, anim_args, animation_prompts, negative_prompt, root):
     # handle hybrid video generation
     if anim_args.animation_mode in ['2D','3D']:
         if anim_args.hybrid_video_composite or anim_args.hybrid_video_motion in ['Affine', 'Perspective', 'Optical Flow']:
@@ -210,6 +210,9 @@ def render_animation(args, anim_args, animation_prompts, root):
     prompt_series = pd.Series([np.nan for a in range(anim_args.max_frames)])
     for i, prompt in animation_prompts.items():
         prompt_series[int(i)] = prompt
+        # Add in our negative prompts
+        if negative_prompt != "":
+            prompt_series[int(i)] = prompt_series[int(i)] + ":1 , " + negative_prompt + ":-1"
     prompt_series = prompt_series.ffill().bfill()
 
     # check for video inits
