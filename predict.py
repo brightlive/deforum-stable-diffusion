@@ -80,7 +80,7 @@ class Predictor(BasePredictor):
             description="Number of denoising steps", ge=1, le=500, default=50
         ),
         guidance_scale: float = Input(
-            description="Scale for classifier-free guidance", ge=1, le=20, default=7
+            description="Scale for classifier-free guidance", ge=1, le=20, default=5
         ),
         sampler: str = Input(
             default="euler_ancestral",
