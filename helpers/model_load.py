@@ -173,9 +173,9 @@ def load_model(root, load_on_run_all=True, check_sha256=True, map_location="cuda
             'url': 'https://huggingface.co/nousr/robo-diffusion/resolve/main/models/robo-diffusion-v1.ckpt',
             'requires_login': False,
             },
-        "wd-v1-3-float16.ckpt": {
-            'sha256': '4afab9126057859b34d13d6207d90221d0b017b7580469ea70cee37757a29edd',
-            'url': 'https://huggingface.co/hakurei/waifu-diffusion-v1-3/resolve/main/wd-v1-3-float16.ckpt',
+        "Anything-V3.0-pruned-fp16.ckpt": {
+            'sha256': '812cd9f9d9a0cb62aaad605173fd64dea13cc8ead9a18ca8eca5bc94aba58583',
+            'url': 'https://huggingface.co/admruul/anything-v3.0/resolve/main/Anything-V3.0-pruned-fp16.ckpt',
             'requires_login': False,
             },
     }

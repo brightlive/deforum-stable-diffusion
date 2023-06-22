@@ -21,10 +21,10 @@ model_map = {
         'sha256': '02e37aad9f74f574808ad456043b89e8c6b24e22828743fcf002168f76493d9b',
         'url': "https://huggingface.co/prompthero/openjourney-v4/resolve/main/openjourney-v4.ckpt",
         'requires_login': False,
-    },
-    "wd-v1-3-full.ckpt": {
-        'sha256': '23ba8d0411c211d3d14903d46613bc088924e1453ed1c6428ce86bde54a37d27',
-        'url': 'https://huggingface.co/hakurei/waifu-diffusion-v1-3/resolve/main/wd-v1-3-full.ckpt',
+        },
+    "Anything-V3.0-pruned-fp16.ckpt": {
+        'sha256': '812cd9f9d9a0cb62aaad605173fd64dea13cc8ead9a18ca8eca5bc94aba58583',
+        'url': 'https://huggingface.co/admruul/anything-v3.0/resolve/main/Anything-V3.0-pruned-fp16.ckpt',
         'requires_login': False,
         },
     "moDi-v1-pruned.ckpt": {
